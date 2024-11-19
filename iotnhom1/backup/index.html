@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử cảnh báo khí gas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lịch sử cảnh báo khí gas</h1>
+
+        <!-- Chọn thời gian -->
+        <div class="filter">
+            <label for="start-time">Thời gian bắt đầu:</label>
+            <input type="datetime-local" id="start-time" name="start-time">
+
+            <label for="end-time">Thời gian kết thúc:</label>
+            <input type="datetime-local" id="end-time" name="end-time">
+
+            <button id="search-btn">Tìm kiếm</button>
+        </div>
+
+        <!-- Bảng hiển thị lịch sử cảnh báo khí gas -->
+        <h2>Cảnh báo khí gas</h2>
+        <table id="gas-alert-history">
+            <thead>
+                <tr>
+                    <th>Thời gian</th>
+                    <th>Mức khí gas</th>
+                    <th>Cảnh báo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dữ liệu cảnh báo khí gas sẽ được hiển thị ở đây -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

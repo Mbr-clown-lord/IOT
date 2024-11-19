@@ -1,0 +1,247 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.navbar {
+    background-color: #00796b;
+    color: white;
+    padding: 15px 20px;
+    position: fixed; /* Cố định navbar */
+    top: 0;
+    left: 0;
+    width: 100%; /* Đảm bảo navbar chiếm toàn bộ chiều ngang */
+    z-index: 1040; /* Đặt z-index lớn hơn để navbar luôn nằm trên cùng */
+}
+
+.navbar h1 {
+    font-size: 24px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #b2dfdb;
+}
+
+.sidebar {
+    background-color: #004d40;
+    color: white;
+    padding: 20px;
+    height: 100vh; /* Đảm bảo sidebar luôn chiếm toàn bộ chiều cao */
+    width: 240px;
+    position: fixed; /* Cố định sidebar */
+    top: 60px; /* Đảm bảo sidebar bắt đầu dưới navbar */
+    left: 0;
+    z-index: 1030; /* Đảm bảo sidebar không che navbar */
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    /* align-items: center; */
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+.sidebar a i {
+    margin-right: 10px; /* Khoảng cách giữa icon và văn bản */
+}
+
+.sidebar a:hover {
+    background-color: #00796b;
+}
+
+.toggle-btn {
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: 5%;
+}
+
+.toggle-btn:hover {
+    color: #b2dfdb;
+}
+
+.content {
+    padding: 20px;
+    margin-top: 60px; /* Đảm bảo nội dung không bị che bởi navbar */
+    margin-left: 240px; /* Khoảng cách tương ứng với sidebar */
+    background-color: #ffffff;
+    border-left: 1px solid #b2dfdb;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.content h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.sidebar.collapsed a {
+    visibility: hidden;
+}
+
+.sidebar.collapsed a::before {
+    content: attr(data-tooltip);
+    visibility: visible;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+.sidebar.collapsed + .content {
+    margin-left: 60px; 
+}
+body {
+    padding-top: 60px; 
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 70px; 
+    }
+}
+#logo{
+font-size: 30px;
+font-weight: 550;
+}
+#item-sidebar{
+font-size: 18px;
+font-weight: 550;
+}
+.status {
+    margin-top: 10px;
+}
+.status-icon {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-top: 10px;
+display: inline-block;
+}
+#header{
+    background-color: 
+    #00796b;
+    color: #ffffff;
+    font-weight: 550;
+}
+#body-card{
+    border-color: #00796b;
+}
+#gasChart {
+    max-width: 600px;
+    margin: 20px 0;
+}
+.switch {
+position: relative;
+display: inline-block;
+width: 90px; 
+height: 40px; 
+}
+
+.switch input[type="checkbox"] {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: gray;
+transition: 0.4s;
+border-radius: 34px;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 35px; /* Thay đổi chiều cao của dot */
+width: 35px; /* Thay đổi chiều rộng của dot */
+left: 4px; /* Thay đổi vị trí ban đầu của dot */
+bottom: 3px; /* Thay đổi vị trí ban đầu của dot */
+background-color: white;
+transition: 0.4s;
+border-radius: 50%;
+}
+
+/* Khi switch được bật */
+input[type="checkbox"]:checked + .slider {
+background-color: #00796b;
+}
+
+input[type="checkbox"]:checked + .slider:before {
+transform: translateX(50px); 
+}
+/* ĐIỀU CHỈNH NGƯỠNG */
+/* Định dạng thanh trượt */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: gray;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+/* Định dạng phần nút kéo trên thanh trượt (WebKit) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: 
+    #00796b;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Định dạng phần nút kéo trên thanh trượt (Firefox) */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #00796b;
+    border-radius: 50%;
+    cursor: pointer;
+}

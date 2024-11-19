@@ -1,0 +1,71 @@
+
+<div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+        <div class="card text-center">
+  <div class="card-header" id="header">
+    <p>TRẠNG THÁI HỆ THỐNG</p>
+  </div>
+  <div class="card-body">
+    <p class="status" id="modeStatus">OFF</p>
+    <!-- Thêm biểu tượng hình tròn -->
+    <div id="statusSys" class="status-icon"></div>
+  </div>
+</div>
+
+        </div>
+        <div class="col-4">
+        <div class="card text-center">
+            <div class="card-header" id="header"><p>KHÍ GAS ĐO ĐƯỢC</p></div>
+            <div class="card-body">
+            <span style="font-size: 45px;" id="gasValue">0</span>
+            <h1>PPM</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+        <div class="card text-center">
+            <div class="card-header" id="header"><p>TRẠNG THÁI CẢNH BÁO</p></div>
+            <div class="card-body">
+            <p class="status" id="alertStatus">SAFE</p>
+            <div id="statusAlert" class="status-icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="mt-5">
+        <div class="row">
+          <div class="col-8">
+          <canvas id="gasChart"></canvas>
+          </div>
+          <div class="col-4">
+          <div class="card text-center">
+  <div class="card-header" id="header">
+    <p>BẬT/TẮT CẢNH BÁO</p>
+  </div>
+  <div class="card-body">
+    <label class="switch">
+      <input type="checkbox" id="toggleMode">
+      <span class="slider round"></span>
+    </label>
+  </div>
+</div>
+
+            <div class="mt-5">
+            <div class="card text-center">
+            <div class="card-header" id="header"><p>ĐIỀU CHỈNH NGƯỠNG</p></div>
+            <div class="card-body">
+            <p>MỨC CẢNH BÁO<input type="number" id="threshold" value="30" min="0"></p>
+            </div>
+          </div>
+        </div>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
